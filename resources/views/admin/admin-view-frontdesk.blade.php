@@ -152,7 +152,7 @@
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="">Admin</a></li>
           <li class="breadcrumb-item"><a href="{{ route('admin.admin-panel') }}">Dashboard</a></li>
-          <li class="breadcrumb-item active">Registered Guest</li>
+          <li class="breadcrumb-item active">Registered Frontdesk</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -219,7 +219,7 @@
 
 <div class="w-1/2 flex flex-col m-auto">
     <button class="bg-[#E0C822]  text-white font-bold py-2 px-4 rounded">
-        Register
+       Register
     </button>
 </div>
 
@@ -251,7 +251,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                  @foreach ($guest as $user)
+                  @foreach ($frontdesk as $user)
                     <tr>
                         <td>{{ $user->id }}</td>
                         <td>{{ $user->name }}</td>
@@ -260,7 +260,7 @@
                        
                         <td>
                         <!--View Button-->
-                        <button href="#" type="button" class="btn btn-primary" id="modal2" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
+                        <button href="{{ route('modal.view-guest') }}" type="button" class="btn btn-primary" id="modal2" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
                               View
                               </button>
                             </td>

@@ -68,7 +68,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="{{ route('login') }}">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
@@ -190,7 +190,7 @@
                     </div>
                     <div class="ps-3">
                       <h6>{{$admin}}</h6>
-                      <a href="#">View</a>
+                      <a href="{{ route('admin.admin-view-frontdesk') }}">View</a>
                     </div>
                   </div>
                 </div>

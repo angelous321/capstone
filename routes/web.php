@@ -18,9 +18,12 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::get('logout', '\App\Http\Controllers\LoginController@logout');
 Route::get('home', [App\Http\Controllers\AdminController::class, 'adminPanel'])->name('admin.admin-panel');
 Route::get('admin/admin-view-guest', [App\Http\Controllers\AdminController::class, 'guestList'])->name('admin.admin-view-guest');
 Route::get('modal/admin-view-guest', [App\Http\Controllers\AdminController::class, 'viewguestList'])->name('modal.view-guest');
+Route::get('admin/admin-view-frontdesk', [App\Http\Controllers\AdminController::class, 'frontdeskList'])->name('admin.admin-view-frontdesk');
+//Route::get('modal/admin-view-frontdesk', [App\Http\Controllers\AdminController::class, 'viewguestList'])->name('modal.view-frontdesk');
 //Route::prefix('admin')->group(function (){
 //Route::get('/admin-view-guest', [AdminController::class, 'admin-view-guest'])->name('admin.admin-view-guest');
 //}
