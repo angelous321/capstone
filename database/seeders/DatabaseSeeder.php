@@ -18,5 +18,21 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        DB::table('roles')->insert([
+            [
+                'name' => 'Admin'
+            ],
+            [
+                'name' => 'Frontdesk'
+            ],
+            [
+                'name' => 'guest'
+            ],
+            [
+                'name' => 'cashier'
+            ],
+             
+        ]);
     }
 }
